@@ -1,7 +1,7 @@
 <?php
 
 $config = [
-    'id' => 'basic',
+    'id' => 'web',
     'basePath' => dirname( __DIR__ ),
     'controllerNamespace' => 'plyr1705\interfaces\frontend\controllers',
     'bootstrap' => [ 'log' ],
