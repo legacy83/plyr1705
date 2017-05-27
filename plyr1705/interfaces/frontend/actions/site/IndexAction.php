@@ -5,7 +5,7 @@ namespace plyr1705\interfaces\frontend\actions\site;
 use yii\base\Action;
 
 /**
- * Class SiteIndex
+ * Class IndexAction
  *
  * @package plyr1705\interfaces\frontend\actions\site
  */
