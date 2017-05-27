@@ -1,15 +1,15 @@
 <?php
 
-namespace plyr1705\interfaces\frontend\actions;
+namespace plyr1705\interfaces\frontend\actions\site;
 
 use yii\base\Action;
 
 /**
  * Class SiteSingleProject
  *
- * @package plyr1705\interfaces\frontend\actions
+ * @package plyr1705\interfaces\frontend\actions\site
  */
-class SiteSingleProject extends Action
+class SingleProjectAction extends Action
 {
     public function run()
     {
