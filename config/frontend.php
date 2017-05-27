@@ -24,7 +24,6 @@ $config = [
                 ],
             ],
         ],
-        'db' => require( __DIR__ . '/common/db.php' ),
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -32,11 +31,10 @@ $config = [
                 '<alias:\w+>' => 'site/<alias>',
             ],
         ],
+        'db' => require( __DIR__ . '/common/database.php' ),
     ],
     'params' => require( __DIR__ . '/common/params.php' ),
-    'aliases' => [
-        '@plyr1705' => '@app/plyr1705',
-    ],
+    'aliases' => require( __DIR__ . '/common/aliases.php' ),
 ];
 
 if ( YII_ENV_DEV ) {
