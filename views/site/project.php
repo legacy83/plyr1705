@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Plyr | Home';
+$this->title = 'Plyr | Single Project';
 ?>
 
 

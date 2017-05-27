@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace plyr1705\interfaces\controllers;
 
 use plyr1705\interfaces\actions\SiteIndex;
 use plyr1705\interfaces\actions\SiteSingleProject;
@@ -9,7 +9,7 @@ use yii\web\Controller;
 /**
  * Class SiteController
  *
- * @package app\controllers
+ * @package plyr1705\interfaces\controllers
  */
 class SiteController extends Controller
 {

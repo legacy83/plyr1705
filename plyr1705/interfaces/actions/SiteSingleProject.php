@@ -13,6 +13,6 @@ class SiteSingleProject extends Action
 {
     public function run()
     {
-        return $this->controller->render( 'index' );
+        return $this->controller->render( 'project' );
     }
 }

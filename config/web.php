@@ -44,6 +44,9 @@ $config = [
         */
     ],
     'params' => $params,
+    'controllerMap' => [
+        'site' => 'plyr1705\interfaces\controllers\SiteController',
+    ],
     'aliases' => [
         '@plyr1705' => '@app/plyr1705',
     ],

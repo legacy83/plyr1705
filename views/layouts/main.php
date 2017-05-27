@@ -32,7 +32,7 @@ SiteAsset::register( $this );
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#intro" class="navbar-brand">PLYR</a>
+            <a href="<?= Yii::$app->homeUrl; ?>" class="navbar-brand">Plyr</a>
         </div> <!-- /.navbar-header -->
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
