@@ -24,14 +24,13 @@ $config = [
             ],
         ],
         'db' => require( __DIR__ . '/db.php' ),
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<alias:\w+>' => 'site/<alias>',
             ],
         ],
-        */
     ],
     'params' => require( __DIR__ . '/params.php' ),
     'controllerMap' => [
