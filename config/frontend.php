@@ -24,7 +24,7 @@ $config = [
                 ],
             ],
         ],
-        'db' => require( __DIR__ . '/db.php' ),
+        'db' => require( __DIR__ . '/common/db.php' ),
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -33,7 +33,7 @@ $config = [
             ],
         ],
     ],
-    'params' => require( __DIR__ . '/params.php' ),
+    'params' => require( __DIR__ . '/common/params.php' ),
     'aliases' => [
         '@plyr1705' => '@app/plyr1705',
     ],

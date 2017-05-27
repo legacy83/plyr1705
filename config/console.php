@@ -16,9 +16,9 @@ $config = [
                 ],
             ],
         ],
-        'db' => require( __DIR__ . '/db.php' ),
+        'db' => require( __DIR__ . '/common/db.php' ),
     ],
-    'params' => require( __DIR__ . '/params.php' ),
+    'params' => require( __DIR__ . '/common/params.php' ),
 ];
 
 if ( YII_ENV_DEV ) {
