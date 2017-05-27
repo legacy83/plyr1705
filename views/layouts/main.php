@@ -45,7 +45,7 @@ SiteAsset::register( $this );
     </div> <!-- /.container -->
 </nav> <!-- /.navbar -->
 
-<div class="solo-1">
+<div class="solo-1 solo-1--custom">
     <?= $content; ?>
 </div> <!-- /.solo-1 -->
 
