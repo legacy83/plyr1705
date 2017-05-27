@@ -4,3 +4,39 @@
 .solo-1--custom #portfolio {
     padding-bottom: 140px;
 }
+
+/*--------------------------------------------------------------
+# Error 1
+--------------------------------------------------------------*/
+.error-1--custom {
+    padding-top: 250px;
+    padding-bottom: 150px;
+}
+
+.error-1--custom h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.error-1--custom .lead {
+    color: #2a2a2a;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.65em;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.error-1--custom .text {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.single-post .post-quote {
+    color: #2a2a2a;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}

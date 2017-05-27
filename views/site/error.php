@@ -10,12 +10,12 @@ use yii\helpers\Html;
 $this->title = "Plyr | {$name}";
 ?>
 
-<div class="single-post">
+<div class="error-1 error-1--custom">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-push-1">
 
-                <h1><?= Html::encode( $this->title ) ?></h1>
+                <h1><?= Html::encode( $name ) ?></h1>
 
                 <p class="lead"><?= nl2br( Html::encode( $message ) ) ?></p>
 
