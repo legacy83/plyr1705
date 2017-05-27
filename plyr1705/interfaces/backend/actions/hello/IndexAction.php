@@ -1,18 +1,18 @@
 <?php
 
-namespace plyr1705\interfaces\console\actions\hello;
+namespace plyr1705\interfaces\backend\actions\hello;
 
 use yii\base\Action;
 
 /**
  * Class IndexAction
  *
- * @package plyr1705\interfaces\console\actions\hello
+ * @package plyr1705\interfaces\backend\actions\hello
  */
 class IndexAction extends Action
 {
     public function run( $message = 'hello, world!' )
     {
-        echo $message . "\n";
+        echo $message;
     }
 }
