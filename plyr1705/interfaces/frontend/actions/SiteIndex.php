@@ -1,13 +1,13 @@
 <?php
 
-namespace plyr1705\interfaces\actions;
+namespace plyr1705\interfaces\frontend\actions;
 
 use yii\base\Action;
 
 /**
  * Class SiteIndex
  *
- * @package plyr1705\interfaces\actions
+ * @package plyr1705\interfaces\frontend\actions
  */
 class SiteIndex extends Action
 {

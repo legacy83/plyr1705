@@ -1,13 +1,13 @@
 <?php
 
-namespace plyr1705\interfaces\assets;
+namespace plyr1705\interfaces\frontend\assets;
 
 use yii\web\AssetBundle;
 
 /**
  * Class PlyrAsset
  *
- * @package plyr1705\interfaces\assets
+ * @package plyr1705\interfaces\frontend\assets
  */
 class SiteAsset extends AssetBundle
 {

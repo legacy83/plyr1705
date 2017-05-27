@@ -1,16 +1,16 @@
 <?php
 
-namespace plyr1705\interfaces\controllers;
+namespace plyr1705\interfaces\frontend\controllers;
 
-use plyr1705\interfaces\actions\SiteIndex;
-use plyr1705\interfaces\actions\SiteSingleProject;
+use plyr1705\interfaces\frontend\actions\SiteIndex;
+use plyr1705\interfaces\frontend\actions\SiteSingleProject;
 use yii\web\Controller;
 use yii\web\ErrorAction;
 
 /**
  * Class SiteController
  *
- * @package plyr1705\interfaces\controllers
+ * @package plyr1705\interfaces\frontend\controllers
  */
 class SiteController extends Controller
 {

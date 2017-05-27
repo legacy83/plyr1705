@@ -4,7 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use plyr1705\interfaces\assets\SiteAsset;
+use plyr1705\interfaces\frontend\assets\SiteAsset;
 
 SiteAsset::register( $this );
 ?>
