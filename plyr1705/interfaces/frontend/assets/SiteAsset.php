@@ -5,7 +5,7 @@ namespace plyr1705\interfaces\frontend\assets;
 use yii\web\AssetBundle;
 
 /**
- * Class PlyrAsset
+ * Class SiteAsset
  *
  * @package plyr1705\interfaces\frontend\assets
  */
