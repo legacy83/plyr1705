@@ -32,20 +32,22 @@ SiteAsset::register( $this );
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand">PLYR</a>
+            <a href="#intro" class="navbar-brand">PLYR</a>
         </div> <!-- /.navbar-header -->
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="#intro" class="js-trigger">Home</a></li>
+                <li><a href="#portfolio" class="js-trigger">Portfolio</a></li>
             </ul>
         </div> <!-- /.collapse -->
 
     </div> <!-- /.container -->
 </nav> <!-- /.navbar -->
 
-<?= $content; ?>
+<div class="solo-1">
+    <?= $content; ?>
+</div> <!-- /.solo-1 -->
 
 <footer>
     <div class="container">
