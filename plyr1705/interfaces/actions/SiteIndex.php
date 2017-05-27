@@ -13,6 +13,7 @@ class SiteIndex extends Action
 {
     public function run()
     {
+        $this->controller->layout = 'main-home';
         return $this->controller->render( 'index' );
     }
 }

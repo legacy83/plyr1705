@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Url;
+
 $this->title = 'Plyr | Home';
 ?>
 
@@ -22,7 +24,7 @@ $this->title = 'Plyr | Home';
                 <?php foreach ( range( 1, 12 ) as $index ): ?>
 
                     <div class="col-md-4 col-sm-6 scrollreveal">
-                        <a href="#">
+                        <a href="<?= Url::to( [ 'site/project', 'id' => $index ] ); ?>">
                             <img src="http://static.npress.com.br/plyr/assets/images/portfolio2-thumb1.jpg" class="img-responsive" alt=""/>
                             <div class="overlay">
                                 <div class="content">

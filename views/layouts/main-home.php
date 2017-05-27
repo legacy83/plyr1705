@@ -22,7 +22,7 @@ SiteAsset::register( $this );
 <body>
 <?php $this->beginBody() ?>
 
-<nav class="navbar navbar-default navbar-fixed-top scrollreveal" id="nav">
+<nav id="nav" class="navbar navbar-default navbar-fixed-top scrollreveal">
     <div class="container">
 
         <div class="navbar-header">
@@ -32,15 +32,13 @@ SiteAsset::register( $this );
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="<?= Yii::$app->homeUrl; ?>" class="navbar-brand">Plyr</a>
+            <a href="#intro" class="navbar-brand js-trigger">Plyr</a>
         </div> <!-- /.navbar-header -->
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?= Yii::$app->homeUrl; ?>">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#intro" class="js-trigger">Home</a></li>
+                <li><a href="#portfolio" class="js-trigger">Portfolio</a></li>
             </ul>
         </div> <!-- /.collapse -->
 
