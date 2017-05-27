@@ -13,6 +13,6 @@ class IndexAction extends Action
 {
     public function run( $message = 'hello, world!' )
     {
-        echo $message;
+        return $message;
     }
 }
