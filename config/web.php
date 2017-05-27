@@ -3,6 +3,7 @@
 $config = [
     'id' => 'basic',
     'basePath' => dirname( __DIR__ ),
+    'controllerNamespace' => 'plyr1705\interfaces\controllers',
     'bootstrap' => [ 'log' ],
     'components' => [
         'request' => [
@@ -33,9 +34,6 @@ $config = [
         ],
     ],
     'params' => require( __DIR__ . '/params.php' ),
-    'controllerMap' => [
-        'site' => 'plyr1705\interfaces\controllers\SiteController',
-    ],
     'aliases' => [
         '@plyr1705' => '@app/plyr1705',
     ],
