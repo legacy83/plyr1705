@@ -1,13 +1,9 @@
 <?php
 
-$params = require(__DIR__ . '/params.php');
-$db = require(__DIR__ . '/db.php');
-
 $config = [
-    'id' => 'basic-console',
-    'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
-    'controllerNamespace' => 'app\commands',
+    'id' => 'plyr-console',
+    'basePath' => dirname( __DIR__ ),
+    'bootstrap' => [ 'log' ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -16,26 +12,18 @@ $config = [
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'levels' => [ 'error', 'warning' ],
                 ],
             ],
         ],
-        'db' => $db,
+        'db' => require( __DIR__ . '/db.php' ),
     ],
-    'params' => $params,
-    /*
-    'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
-            'class' => 'yii\faker\FixtureController',
-        ],
-    ],
-    */
+    'params' => require( __DIR__ . '/params.php' ),
 ];
 
-if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
+if ( YII_ENV_DEV ) {
+    $config[ 'bootstrap' ][] = 'gii';
+    $config[ 'modules' ][ 'gii' ] = [
         'class' => 'yii\gii\Module',
     ];
 }
