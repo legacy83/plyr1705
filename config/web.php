@@ -35,6 +35,14 @@ $config = [
     ],
     'params' => require( __DIR__ . '/common/params.php' ),
     'aliases' => require( __DIR__ . '/common/aliases.php' ),
+    'modules' => [
+        'api' => [
+            'class' => 'app\modules\api\v01\Module',
+        ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+    ],
 ];
 
 if ( YII_ENV_DEV ) {

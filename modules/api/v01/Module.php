@@ -3,22 +3,17 @@
 namespace app\modules\api\v01;
 
 /**
- * api-v01 module definition class
+ * Class Module
+ *
+ * @package app\modules\api\v01
  */
 class Module extends \yii\base\Module
 {
-    /**
-     * @inheritdoc
-     */
-    public $controllerNamespace = 'app\modules\api\v01\controllers';
+    public $controllerNamespace = 'plyr1705\interfaces\api\controllers';
+    public $defaultRoute = 'hello/index';
 
-    /**
-     * @inheritdoc
-     */
     public function init()
     {
         parent::init();
-
-        // custom initialization code goes here
     }
 }
