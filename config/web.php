@@ -37,7 +37,7 @@ $config = [
     'aliases' => require( __DIR__ . '/common/aliases.php' ),
     'modules' => [
         'api' => [
-            'class' => 'app\modules\api\v01\Module',
+            'class' => 'app\modules\api\Module',
         ],
         'admin' => [
             'class' => 'app\modules\admin\Module',

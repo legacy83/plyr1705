@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\api\v01;
+namespace app\modules\api;
 
 /**
  * Class Module
  *
- * @package app\modules\api\v01
+ * @package app\modules\api
  */
 class Module extends \yii\base\Module
 {
