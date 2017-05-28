@@ -27,9 +27,6 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-                '<alias:\w+>' => 'site/<alias>',
-            ],
         ],
         'db' => require( __DIR__ . '/common/database.php' ),
     ],
