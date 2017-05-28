@@ -13,6 +13,16 @@ class HomePortfolio extends Widget
 {
     public function run()
     {
-        return $this->render( 'home-portfolio' );
+        $portfolio = [];
+        foreach ( range( 1, 9 ) as $identity ) {
+            $project = new \stdClass();
+            $project->id = $identity;
+
+            array_push( $portfolio, $project );
+        }
+
+        return $this->render( 'home-portfolio', [
+            'portfolio' => $portfolio,
+        ] );
     }
 }
