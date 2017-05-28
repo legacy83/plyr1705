@@ -22,9 +22,9 @@ SiteAsset::register( $this );
 <body>
 <?php $this->beginBody(); ?>
 
-<?= $this->render( '_site-header' ); ?>
+<?= $this->render( '_partials/header' ); ?>
 <?= $content; ?>
-<?= $this->render( '_site-footer' ); ?>
+<?= $this->render( '_partials/footer' ); ?>
 
 <?php $this->endBody(); ?>
 </body>
