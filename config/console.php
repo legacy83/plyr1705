@@ -1,7 +1,7 @@
 <?php
 
 $config = [
-    'id' => 'plyr-console',
+    'id' => 'console',
     'basePath' => dirname( __DIR__ ),
     'controllerNamespace' => 'plyr1705\interfaces\console\controllers',
     'bootstrap' => [ 'log' ],
