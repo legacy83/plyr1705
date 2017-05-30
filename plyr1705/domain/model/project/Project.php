@@ -10,13 +10,6 @@ namespace plyr1705\domain\model\project;
 interface Project
 {
     /**
-     * Set the project content.
-     *
-     * @param Content $content
-     */
-    public function setContent( Content $content );
-
-    /**
      * Get the project content.
      *
      * @return Content
@@ -24,16 +17,30 @@ interface Project
     public function getContent();
 
     /**
-     * Set the project client.
-     *
-     * @param Client $client
-     */
-    public function setClient( Client $client );
-
-    /**
      * Get the project client.
      *
      * @return Client
      */
     public function getClient();
+
+    /**
+     * Get the project thumbnail image.
+     *
+     * @return Image
+     */
+    public function getThumbnail();
+
+    /**
+     * Get the project featured image.
+     *
+     * @return Image
+     */
+    public function getFeatured();
+
+    /**
+     * Get the project images.
+     *
+     * @return array
+     */
+    public function getImages();
 }
