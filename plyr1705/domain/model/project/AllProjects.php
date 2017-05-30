@@ -12,7 +12,7 @@ interface AllProjects
     /**
      * Get all recently placed projects.
      *
-     * @return mixed
+     * @return array
      */
     public function recentryPlaced();
 }
