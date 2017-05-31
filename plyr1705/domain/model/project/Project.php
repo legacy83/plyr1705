@@ -30,4 +30,9 @@ class Project extends ActiveRecord
     {
         return '{{%project}}';
     }
+
+    public function getClient()
+    {
+        return $this->hasOne( ProjectMeta::className(), [ 'project_id' => 'id' ] );
+    }
 }
