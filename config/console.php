@@ -21,6 +21,12 @@ $config = [
     ],
     'params' => require( __DIR__ . '/shared/params.php' ),
     'aliases' => require( __DIR__ . '/shared/aliases.php' ),
+    'controllerMap' => [
+        'migrate' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            'migrationPath' => '@plyr1705/infrastructure/migrations',
+        ],
+    ],
 ];
 
 return $config;
