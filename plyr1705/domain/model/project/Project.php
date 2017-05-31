@@ -2,45 +2,32 @@
 
 namespace plyr1705\domain\model\project;
 
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+
 /**
- * Interface Project
+ * Class Project
+ *
+ * @property integer $id
+ * @property string  $name
+ * @property string  $title
+ * @property string  $content
+ * @property integer $created_at
+ * @property integer $updated_at
  *
  * @package plyr1705\domain\model\project
  */
-interface Project
+class Project extends ActiveRecord
 {
-    /**
-     * Get the project content.
-     *
-     * @return Content
-     */
-    public function getContent();
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
 
-    /**
-     * Get the project client.
-     *
-     * @return Client
-     */
-    public function getClient();
-
-    /**
-     * Get the project thumbnail image.
-     *
-     * @return Image
-     */
-    public function getThumbnail();
-
-    /**
-     * Get the project featured image.
-     *
-     * @return Image
-     */
-    public function getFeatured();
-
-    /**
-     * Get the project images.
-     *
-     * @return array
-     */
-    public function getImages();
+    public static function tableName()
+    {
+        return '{{%project}}';
+    }
 }
