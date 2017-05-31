@@ -5,7 +5,7 @@ namespace plyr1705\domain\model\project;
 use yii\db\ActiveRecord;
 
 /**
- * Class Project
+ * Class ProjectMetaRecord
  *
  * @property integer $id
  * @property integer $project_id
@@ -14,7 +14,7 @@ use yii\db\ActiveRecord;
  *
  * @package plyr1705\domain\model\project
  */
-class ProjectMeta extends ActiveRecord
+class ProjectMetaRecord extends ActiveRecord
 {
     public static function tableName()
     {
