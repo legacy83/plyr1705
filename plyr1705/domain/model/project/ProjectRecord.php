@@ -12,6 +12,15 @@ use yii\db\ActiveRecord;
  * @property string  $name
  * @property string  $title
  * @property string  $content
+ * @property string  $client_name
+ * @property string  $thumbnail_src
+ * @property string  $thumbnail_alt
+ * @property string  $featured_src
+ * @property string  $featured_alt
+ * @property string  $work1_src
+ * @property string  $work1_alt
+ * @property string  $work2_src
+ * @property string  $work2_alt
  * @property integer $created_at
  * @property integer $updated_at
  *
@@ -21,16 +30,6 @@ class ProjectRecord extends ActiveRecord
 {
     /**
      * @inheritdoc
-     */
-    public function init()
-    {
-        parent::init();
-    }
-
-    /**
-     * @inheritdoc
-     *
-     * @return array
      */
     public function behaviors()
     {
