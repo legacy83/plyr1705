@@ -3,11 +3,13 @@
 use yii\db\Migration;
 
 /**
- * Class m170531_020538_init
- *
+ * Class m170602_120857_create_project_table
  */
-class m170531_020538_init extends Migration
+class m170602_120857_create_project_table extends Migration
 {
+    /**
+     * @inheritdoc
+     */
     public function up()
     {
         $this->createTable( 'project', [
@@ -29,6 +31,9 @@ class m170531_020538_init extends Migration
         ] );
     }
 
+    /**
+     * @inheritdoc
+     */
     public function down()
     {
         $this->dropTable( 'project' );
