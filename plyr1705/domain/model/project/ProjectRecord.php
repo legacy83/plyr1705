@@ -16,6 +16,7 @@ use yii\db\ActiveRecord;
  * @property ClientRecord     $client
  * @property MediaImageRecord $thumbnail
  * @property MediaImageRecord $featured
+ * @property MediaImageRecord $workImages
  *
  * @package plyr1705\domain\model\project
  */
@@ -54,5 +55,11 @@ class ProjectRecord extends ActiveRecord
     {
         $query = $this->hasOne( MediaImageRecord::className(), [ 'id' => 'featured_id' ] );
         return $query->where( '`key` = :key', [ ':key' => 'featured' ] );
+    }
+
+    public function getWorkImages()
+    {
+        $query = $this->hasMany( MediaImageRecord::className(), [ 'project_id' => 'id' ] );
+        return $query->where( '`key` = :key', [ ':key' => 'work-images' ] );
     }
 }
