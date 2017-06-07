@@ -16,7 +16,7 @@ use yii\db\ActiveRecord;
  * @property ClientRecord     $client
  * @property MediaImageRecord $thumbnail
  * @property MediaImageRecord $featured
- * @property MediaImageRecord $workImages
+ * @property array            $workImages
  *
  * @package plyr1705\domain\model\project
  */
@@ -40,23 +40,43 @@ class ProjectRecord extends ActiveRecord
         ];
     }
 
+    /**
+     * Get the client.
+     *
+     * @return \yii\db\ActiveQuery
+     */
     public function getClient()
     {
         return $this->hasOne( ClientRecord::className(), [ 'id' => 'client_id' ] );
     }
 
+    /**
+     * Get the thumbnail image.
+     *
+     * @return \yii\db\ActiveQuery
+     */
     public function getThumbnail()
     {
         $query = $this->hasOne( MediaImageRecord::className(), [ 'id' => 'thumbnail_id' ] );
         return $query->where( '`key` = :key', [ ':key' => 'thumbnail' ] );
     }
 
+    /**
+     * Get the featured image.
+     *
+     * @return \yii\db\ActiveQuery
+     */
     public function getFeatured()
     {
         $query = $this->hasOne( MediaImageRecord::className(), [ 'id' => 'featured_id' ] );
         return $query->where( '`key` = :key', [ ':key' => 'featured' ] );
     }
 
+    /**
+     * Get all the related work images.
+     *
+     * @return \yii\db\ActiveQuery
+     */
     public function getWorkImages()
     {
         $query = $this->hasMany( MediaImageRecord::className(), [ 'project_id' => 'id' ] );
