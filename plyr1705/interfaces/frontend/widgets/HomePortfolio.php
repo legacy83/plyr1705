@@ -15,7 +15,6 @@ class HomePortfolio extends Widget
     public function run()
     {
         $query = ProjectRecord::find();
-        $query->orderBy( 'created_at desc' );
         $query->limit( 12 );
 
         return $this->render( 'home-portfolio', [
