@@ -2,6 +2,7 @@
 
 namespace plyr1705\interfaces\frontend\widgets;
 
+use plyr1705\domain\model\project\ProjectRecord;
 use yii\base\Widget;
 
 /**
@@ -13,16 +14,12 @@ class HomePortfolio extends Widget
 {
     public function run()
     {
-        $portfolio = [];
-        foreach ( range( 1, 9 ) as $identity ) {
-            $project = new \stdClass();
-            $project->id = $identity;
-
-            array_push( $portfolio, $project );
-        }
+        $query = ProjectRecord::find();
+        $query->orderBy( 'created_at desc' );
+        $query->limit( 12 );
 
         return $this->render( 'home-portfolio', [
-            'portfolio' => $portfolio,
+            'portfolio' => $query->all(),
         ] );
     }
 }

@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $portfolio array */
+/* @var $project \plyr1705\domain\model\project\ProjectRecord */
 
 use yii\helpers\Url;
 
@@ -15,10 +16,10 @@ use yii\helpers\Url;
 
                 <div class="col-md-4 col-sm-6 scrollreveal">
                     <a href="<?= Url::to( [ 'site/project', 'id' => $project->id ] ); ?>">
-                        <img src="http://static.npress.com.br/plyr/assets/images/portfolio2-thumb1.jpg" class="img-responsive" alt=""/>
+                        <img src="<?= $project->thumbnail->url; ?>" class="img-responsive" alt="<?= $project->thumbnail->alt; ?>"/>
                         <div class="overlay">
                             <div class="content">
-                                <h4>Arcu Elementum</h4>
+                                <h4><?= $project->title; ?></h4>
                                 <p>View Details</p>
                             </div> <!-- /.content -->
                         </div> <!-- /.overlay -->
