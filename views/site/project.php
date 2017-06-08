@@ -1,32 +1,33 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $project \plyr1705\domain\model\project\ProjectRecord */
+/* @var $workImage \plyr1705\domain\model\project\MediaImageRecord */
 
 $this->title = 'Plyr | Single Project';
+$formatter = \Yii::$app->formatter;
 ?>
 
 <div class="single-project single-project-1">
     <div class="container">
 
         <div class="intro">
-            <h1 class="scrollreveal">Project Name</h1>
-            <p class="description scrollreveal">Army had half a day. There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. There's so many poorly chosen words in that sentence.</p>
+            <h1 class="scrollreveal"><?= $project->title; ?></h1>
+            <p class="description scrollreveal"><?= $project->content; ?></p>
             <ul class="list-inline list-unstyled scrollreveal">
-                <li>Client: Google</li>
-                <li>Date: April 2017</li>
+                <li>Client: <?= $project->client->name; ?></li>
+                <li>Date: <?= $formatter->asDate( $project->created_at, 'MMMM Y' ); ?></li>
             </ul>
         </div> <!-- /.intro -->
 
-        <img src="http://static.npress.com.br/plyr/assets/images/single-work1.jpg" class="scrollreveal img-responsive" alt=""/>
+        <img src="<?= $project->featured->url; ?>" class="scrollreveal img-responsive" alt="<?= $project->featured->alt; ?>"/>
 
         <div class="row">
-            <div class="col-md-6 scrollreveal">
-                <img src="http://static.npress.com.br/plyr/assets/images/single-work2.jpg" class="img-responsive" alt=""/>
-            </div> <!-- /.col-md-6 -->
-
-            <div class="col-md-6 scrollreveal">
-                <img src="http://static.npress.com.br/plyr/assets/images/single-work3.jpg" class="img-responsive" alt=""/>
-            </div> <!-- /.col-md-6 -->
+            <?php foreach ( $project->workImages as $workImage ): ?>
+                <div class="col-md-6 scrollreveal">
+                    <img src="<?= $workImage->url; ?>" class="img-responsive" alt="<?= $workImage->alt; ?>"/>
+                </div> <!-- /.col-md-6 -->
+            <?php endforeach; ?>
         </div> <!-- /.row -->
 
         <div class="row page-nav scrollreveal">
@@ -37,7 +38,6 @@ $this->title = 'Plyr | Single Project';
                 <a href="#" class="pull-right">Next Project <i class="fa fa-chevron-right"></i></a>
             </div> <!-- /.col-sm-6 -->
         </div> <!-- /.row -->
-
 
     </div> <!-- /.container -->
 </div><!-- /.single-project -->
