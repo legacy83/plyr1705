@@ -19,8 +19,6 @@ class SingleProjectAction extends Action
 
         return $this->controller->render( 'project', [
             'project' => $project,
-            'previous' => ProjectRecord::findOne( $project->id - 1 ),
-            'next' => ProjectRecord::findOne( $project->id + 1 ),
         ] );
     }
 }

@@ -3,10 +3,8 @@
 /* @var $this yii\web\View */
 /* @var $project \plyr1705\domain\model\project\ProjectRecord */
 /* @var $workImage \plyr1705\domain\model\project\MediaImageRecord */
-/* @var $previous \plyr1705\domain\model\project\ProjectRecord */
-/* @var $next \plyr1705\domain\model\project\ProjectRecord */
 
-use yii\helpers\Url;
+use plyr1705\interfaces\frontend\widgets\SingleProjectNav;
 
 $this->title = 'Plyr | Single Project';
 $formatter = \Yii::$app->formatter;
@@ -34,19 +32,7 @@ $formatter = \Yii::$app->formatter;
             <?php endforeach; ?>
         </div> <!-- /.row -->
 
-        <div class="row page-nav scrollreveal">
-            <div class="col-sm-6">
-                <?php if ( $previous ): ?>
-                    <a href="<?= Url::to( [ 'site/project', 'id' => $previous->id ] ); ?>"><i class="fa fa-chevron-left"></i> Previous Project</a>
-                <?php endif; ?>
-            </div> <!-- /-col-sm-6 -->
-
-            <div class="col-sm-6">
-                <?php if ( $next ): ?>
-                    <a href="<?= Url::to( [ 'site/project', 'id' => $next->id ] ); ?>" class="pull-right">Next Project <i class="fa fa-chevron-right"></i></a>
-                <?php endif; ?>
-            </div> <!-- /.col-sm-6 -->
-        </div> <!-- /.row -->
+        <?= SingleProjectNav::widget( [ 'current' => $project ] ); ?>
 
     </div> <!-- /.container -->
 </div><!-- /.single-project -->
