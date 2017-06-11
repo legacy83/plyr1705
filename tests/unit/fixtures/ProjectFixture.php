@@ -12,4 +12,9 @@ use yii\test\ActiveFixture;
 class ProjectFixture extends ActiveFixture
 {
     public $tableName = 'project';
+    public $depends = [
+        'yii\test\InitDbFixture',
+        'tests\unit\fixtures\ProjectClientFixture',
+        'tests\unit\fixtures\ProjectMediaImageFixture',
+    ];
 }
