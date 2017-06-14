@@ -11,6 +11,11 @@ use yii\db\ActiveQuery;
  */
 class ProjectQuery extends ActiveQuery
 {
+    /**
+     * @param ProjectRecord $project
+     *
+     * @return $this
+     */
     public function next( ProjectRecord $project )
     {
         $this->andWhere( [ 'id' => $project->id + 1 ] );
@@ -18,6 +23,11 @@ class ProjectQuery extends ActiveQuery
         return $this;
     }
 
+    /**
+     * @param ProjectRecord $project
+     *
+     * @return $this
+     */
     public function previous( ProjectRecord $project )
     {
         $this->andWhere( [ 'id' => $project->id - 1 ] );
