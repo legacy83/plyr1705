@@ -5,11 +5,11 @@ namespace plyr1705\interfaces\frontend\assets;
 use yii\web\AssetBundle;
 
 /**
- * Class SiteAsset
+ * Class Asset
  *
  * @package plyr1705\interfaces\frontend\assets
  */
-class SiteAsset extends AssetBundle
+class Asset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';

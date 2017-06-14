@@ -13,6 +13,10 @@ use yii\db\ActiveRecord;
  * @property string           $content
  * @property integer          $created_at
  * @property integer          $updated_at
+ * @property integer          $client_id
+ * @property integer          $thumbnail_id
+ * @property integer          $featured_id
+ *
  * @property ClientRecord     $client
  * @property MediaImageRecord $thumbnail
  * @property MediaImageRecord $featured

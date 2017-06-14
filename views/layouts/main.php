@@ -4,9 +4,10 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use plyr1705\interfaces\frontend\assets\SiteAsset;
+use plyr1705\interfaces\frontend\assets\Asset;
 
-SiteAsset::register( $this );
+Asset::register( $this );
+
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>

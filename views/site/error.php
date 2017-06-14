@@ -15,9 +15,9 @@ $this->title = "Plyr | {$name}";
         <div class="row">
             <div class="col-md-10 col-md-push-1">
 
-                <h1><?= Html::encode( $name ) ?></h1>
+                <h1><?= Html::encode( $name ); ?></h1>
 
-                <p class="lead"><?= nl2br( Html::encode( $message ) ) ?></p>
+                <p class="lead"><?= nl2br( Html::encode( $message ) ); ?></p>
 
                 <p class="text">The above error occurred while the Web server was processing your request.<br>
                     Please contact us if you think this is a server error. Thank you.</p>
