@@ -20,8 +20,8 @@ class SingleProjectNav extends Widget
     public function run()
     {
         return $this->render( 'single-project-nav', [
-            'previous' => ProjectRecord::findOne( $this->current->id - 1 ),
-            'next' => ProjectRecord::findOne( $this->current->id + 1 ),
+            'previous' => ProjectRecord::find()->previous( $this->current )->one(),
+            'next' => ProjectRecord::find()->next( $this->current )->one(),
         ] );
     }
 }

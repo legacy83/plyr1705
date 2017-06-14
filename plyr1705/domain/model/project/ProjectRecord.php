@@ -45,6 +45,16 @@ class ProjectRecord extends ActiveRecord
     }
 
     /**
+     * @inheritdoc
+     *
+     * @return ProjectQuery
+     */
+    public static function find()
+    {
+        return new ProjectQuery( static::class );
+    }
+
+    /**
      * Get the client.
      *
      * @return \yii\db\ActiveQuery
