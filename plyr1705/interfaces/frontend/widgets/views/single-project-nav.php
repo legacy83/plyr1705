@@ -1,8 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $previous \plyr1705\domain\model\project\Project */
-/* @var $next \plyr1705\domain\model\project\Project */
+/* @var $previous \plyr1705\domain\model\Project */
+/* @var $next \plyr1705\domain\model\Project */
 
 use yii\helpers\Url;
 

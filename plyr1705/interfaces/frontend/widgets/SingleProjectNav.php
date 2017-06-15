@@ -2,7 +2,7 @@
 
 namespace plyr1705\interfaces\frontend\widgets;
 
-use plyr1705\domain\model\project\Project;
+use plyr1705\domain\model\Project;
 use yii\base\Widget;
 
 /**

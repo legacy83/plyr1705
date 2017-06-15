@@ -1,6 +1,6 @@
 <?php
 
-namespace plyr1705\domain\model\project;
+namespace plyr1705\domain\model;
 
 use yii\db\ActiveRecord;
 
@@ -10,7 +10,7 @@ use yii\db\ActiveRecord;
  * @property integer $id
  * @property string  $name
  *
- * @package plyr1705\domain\model\project
+ * @package plyr1705\domain\model
  */
 class ProjectClient extends ActiveRecord
 {

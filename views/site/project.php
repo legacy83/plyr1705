@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $project \plyr1705\domain\model\project\Project */
+/* @var $project \plyr1705\domain\model\Project */
 
 use plyr1705\interfaces\frontend\widgets\SingleProjectNav;
 

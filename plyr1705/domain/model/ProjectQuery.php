@@ -1,13 +1,13 @@
 <?php
 
-namespace plyr1705\domain\model\project;
+namespace plyr1705\domain\model;
 
 use yii\db\ActiveQuery;
 
 /**
  * Class ProjectQuery
  *
- * @package plyr1705\domain\model\project
+ * @package plyr1705\domain\model
  */
 class ProjectQuery extends ActiveQuery
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace plyr1705\domain\model\project;
+namespace plyr1705\domain\model;
 
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
@@ -22,7 +22,7 @@ use yii\db\ActiveRecord;
  * @property ProjectMediaImage   $featured
  * @property ProjectMediaImage[] $workImages
  *
- * @package plyr1705\domain\model\project
+ * @package plyr1705\domain\model
  */
 class Project extends ActiveRecord
 {
