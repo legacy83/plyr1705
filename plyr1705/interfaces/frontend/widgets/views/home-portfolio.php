@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $portfolio array */
-/* @var $project \plyr1705\domain\model\project\ProjectRecord */
+/* @var $project \plyr1705\domain\model\project\Project */
 
 use yii\helpers\Url;
 

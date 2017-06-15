@@ -5,20 +5,23 @@ namespace plyr1705\domain\model\project;
 use yii\db\ActiveRecord;
 
 /**
- * Class ClientRecord
+ * Class ProjectMediaImage
  *
  * @property integer $id
- * @property string  $name
+ * @property string  $key
+ * @property string  $url
+ * @property string  $alt
+ * @property string  $project_id
  *
  * @package plyr1705\domain\model\project
  */
-class ClientRecord extends ActiveRecord
+class ProjectMediaImage extends ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'project_client';
+        return 'project_media_image';
     }
 }

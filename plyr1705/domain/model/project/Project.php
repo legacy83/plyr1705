@@ -6,25 +6,25 @@ use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 
 /**
- * Class ProjectRecord
+ * Class Project
  *
- * @property integer          $id
- * @property string           $title
- * @property string           $content
- * @property integer          $created_at
- * @property integer          $updated_at
- * @property integer          $client_id
- * @property integer          $thumbnail_id
- * @property integer          $featured_id
+ * @property integer             $id
+ * @property string              $title
+ * @property string              $content
+ * @property integer             $created_at
+ * @property integer             $updated_at
+ * @property integer             $client_id
+ * @property integer             $thumbnail_id
+ * @property integer             $featured_id
  *
- * @property ClientRecord     $client
- * @property MediaImageRecord $thumbnail
- * @property MediaImageRecord $featured
- * @property array            $workImages
+ * @property ProjectClient       $client
+ * @property ProjectMediaImage   $thumbnail
+ * @property ProjectMediaImage   $featured
+ * @property ProjectMediaImage[] $workImages
  *
  * @package plyr1705\domain\model\project
  */
-class ProjectRecord extends ActiveRecord
+class Project extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -61,7 +61,7 @@ class ProjectRecord extends ActiveRecord
      */
     public function getClient()
     {
-        return $this->hasOne( ClientRecord::className(), [ 'id' => 'client_id' ] );
+        return $this->hasOne( ProjectClient::className(), [ 'id' => 'client_id' ] );
     }
 
     /**
@@ -71,7 +71,7 @@ class ProjectRecord extends ActiveRecord
      */
     public function getThumbnail()
     {
-        $query = $this->hasOne( MediaImageRecord::className(), [ 'id' => 'thumbnail_id' ] );
+        $query = $this->hasOne( ProjectMediaImage::className(), [ 'id' => 'thumbnail_id' ] );
         return $query->where( '`key` = :key', [ ':key' => 'thumbnail' ] );
     }
 
@@ -82,7 +82,7 @@ class ProjectRecord extends ActiveRecord
      */
     public function getFeatured()
     {
-        $query = $this->hasOne( MediaImageRecord::className(), [ 'id' => 'featured_id' ] );
+        $query = $this->hasOne( ProjectMediaImage::className(), [ 'id' => 'featured_id' ] );
         return $query->where( '`key` = :key', [ ':key' => 'featured' ] );
     }
 
@@ -93,7 +93,7 @@ class ProjectRecord extends ActiveRecord
      */
     public function getWorkImages()
     {
-        $query = $this->hasMany( MediaImageRecord::className(), [ 'project_id' => 'id' ] );
+        $query = $this->hasMany( ProjectMediaImage::className(), [ 'project_id' => 'id' ] );
         return $query->where( '`key` = :key', [ ':key' => 'work-images' ] );
     }
 }

@@ -2,7 +2,7 @@
 
 namespace plyr1705\interfaces\frontend\widgets;
 
-use plyr1705\domain\model\project\ProjectRecord;
+use plyr1705\domain\model\project\Project;
 use yii\base\Widget;
 
 /**
@@ -14,7 +14,7 @@ class HomePortfolio extends Widget
 {
     public function run()
     {
-        $query = ProjectRecord::find();
+        $query = Project::find();
         $query->limit( 12 );
 
         return $this->render( 'home-portfolio', [

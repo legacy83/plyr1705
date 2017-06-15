@@ -1,8 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $project \plyr1705\domain\model\project\ProjectRecord */
-/* @var $workImage \plyr1705\domain\model\project\MediaImageRecord */
+/* @var $project \plyr1705\domain\model\project\Project */
 
 use plyr1705\interfaces\frontend\widgets\SingleProjectNav;
 

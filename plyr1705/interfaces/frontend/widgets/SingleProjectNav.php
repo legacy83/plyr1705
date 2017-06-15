@@ -2,7 +2,7 @@
 
 namespace plyr1705\interfaces\frontend\widgets;
 
-use plyr1705\domain\model\project\ProjectRecord;
+use plyr1705\domain\model\project\Project;
 use yii\base\Widget;
 
 /**
@@ -13,15 +13,15 @@ use yii\base\Widget;
 class SingleProjectNav extends Widget
 {
     /**
-     * @var ProjectRecord
+     * @var Project
      */
     public $current;
 
     public function run()
     {
         return $this->render( 'single-project-nav', [
-            'previous' => ProjectRecord::find()->previous( $this->current )->one(),
-            'next' => ProjectRecord::find()->next( $this->current )->one(),
+            'previous' => Project::find()->previous( $this->current )->one(),
+            'next' => Project::find()->next( $this->current )->one(),
         ] );
     }
 }
