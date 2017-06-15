@@ -51,7 +51,7 @@ class Project extends ActiveRecord
      */
     public static function find()
     {
-        return new ProjectQuery( static::class );
+        return new ProjectQuery( static::className() );
     }
 
     /**
