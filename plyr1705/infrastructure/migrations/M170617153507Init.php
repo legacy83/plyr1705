@@ -5,9 +5,11 @@ namespace plyr1705\infrastructure\migrations;
 use yii\db\Migration;
 
 /**
- * Class m170603_005124_init
+ * Class M170617153507Init
+ *
+ * @package plyr1705\infrastructure\migrations
  */
-class m170603_005124_init extends Migration
+class M170617153507Init extends Migration
 {
     /**
      * @inheritdoc
