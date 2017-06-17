@@ -29,16 +29,6 @@ class SiteController extends Controller
         return $this->render( 'index' );
     }
 
-    public function actionAbout()
-    {
-        throw new NotFoundHttpException();
-    }
-
-    public function actionContact()
-    {
-        throw new NotFoundHttpException();
-    }
-
     public function actionProject()
     {
         $projectId = intval( \Yii::$app->request->get( 'id' ) );

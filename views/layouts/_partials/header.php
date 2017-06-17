@@ -33,7 +33,6 @@ $isHome = $isHome && Yii::$app->controller->action->id == 'index';
                 </ul>
             <?php else: ?>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?= Yii::$app->homeUrl; ?>">Home</a></li>
                     <li><a href="<?= Yii::$app->homeUrl; ?>">Portfolio</a></li>
                     <li><a href="<?= Url::to( [ 'site/about' ] ); ?>">About</a></li>
                     <li><a href="<?= Url::to( [ 'site/contact' ] ); ?>">Contact</a></li>
