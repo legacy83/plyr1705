@@ -2,10 +2,12 @@
 
 namespace plyr1705\interfaces\frontend\controllers;
 
+use plyr1705\domain\model\Project;
 use plyr1705\interfaces\frontend\actions\site\IndexAction;
 use plyr1705\interfaces\frontend\actions\site\SingleProjectAction;
 use yii\web\Controller;
 use yii\web\ErrorAction;
+use yii\web\NotFoundHttpException;
 
 /**
  * Class SiteController
@@ -14,12 +16,32 @@ use yii\web\ErrorAction;
  */
 class SiteController extends Controller
 {
+    /**
+     * @inheritdoc
+     */
     public function actions()
     {
         return [
-            'index' => [ 'class' => IndexAction::className(), ],
-            'project' => [ 'class' => SingleProjectAction::className(), ],
             'error' => [ 'class' => ErrorAction::className(), ],
         ];
+    }
+
+    public function actionIndex()
+    {
+        return $this->render( 'index' );
+    }
+
+    public function actionProject()
+    {
+        $projectId = intval( \Yii::$app->request->get( 'id' ) );
+        $project = Project::findOne( $projectId );
+
+        if ( !$project ) {
+            throw new NotFoundHttpException();
+        }
+
+        return $this->render( 'project', [
+            'project' => $project,
+        ] );
     }
 }

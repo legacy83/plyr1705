@@ -2,7 +2,6 @@
 
 namespace plyr1705\interfaces\console\controllers;
 
-use plyr1705\interfaces\console\actions\hello\IndexAction;
 use yii\console\Controller;
 
 /**
@@ -12,10 +11,8 @@ use yii\console\Controller;
  */
 class HelloController extends Controller
 {
-    public function actions()
+    public function actionIndex( $message = 'hello, world!' )
     {
-        return [
-            'index' => [ 'class' => IndexAction::className(), ],
-        ];
+        echo $message . "\n";
     }
 }
