@@ -2,6 +2,8 @@
 
 /* @var $this \yii\web\View */
 
+use yii\helpers\Url;
+
 $isHome = true;
 $isHome = $isHome && Yii::$app->controller->id == 'site';
 $isHome = $isHome && Yii::$app->controller->action->id == 'index';
@@ -26,12 +28,15 @@ $isHome = $isHome && Yii::$app->controller->action->id == 'index';
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#intro" class="js-trigger">Home</a></li>
                     <li><a href="#portfolio" class="js-trigger">Portfolio</a></li>
+                    <li><a href="<?= Url::to( [ 'site/about' ] ); ?>">About</a></li>
+                    <li><a href="<?= Url::to( [ 'site/contact' ] ); ?>">Contact</a></li>
                 </ul>
             <?php else: ?>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?= Yii::$app->homeUrl; ?>">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="<?= Yii::$app->homeUrl; ?>">Portfolio</a></li>
+                    <li><a href="<?= Url::to( [ 'site/about' ] ); ?>">About</a></li>
+                    <li><a href="<?= Url::to( [ 'site/contact' ] ); ?>">Contact</a></li>
                 </ul>
             <?php endif; ?>
         </div> <!-- /.collapse -->

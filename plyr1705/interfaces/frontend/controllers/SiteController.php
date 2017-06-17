@@ -3,8 +3,6 @@
 namespace plyr1705\interfaces\frontend\controllers;
 
 use plyr1705\domain\model\Project;
-use plyr1705\interfaces\frontend\actions\site\IndexAction;
-use plyr1705\interfaces\frontend\actions\site\SingleProjectAction;
 use yii\web\Controller;
 use yii\web\ErrorAction;
 use yii\web\NotFoundHttpException;
@@ -29,6 +27,16 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render( 'index' );
+    }
+
+    public function actionAbout()
+    {
+        throw new NotFoundHttpException();
+    }
+
+    public function actionContact()
+    {
+        throw new NotFoundHttpException();
     }
 
     public function actionProject()
