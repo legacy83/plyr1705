@@ -32,14 +32,6 @@ $config = [
     ],
     'params' => require( __DIR__ . '/shared/params.php' ),
     'aliases' => require( __DIR__ . '/shared/aliases.php' ),
-    'modules' => [
-        'api' => [
-            'class' => 'app\modules\api\Module',
-        ],
-        'admin' => [
-            'class' => 'app\modules\admin\Module',
-        ],
-    ],
 ];
 
 return $config;
