@@ -14,11 +14,10 @@ class HomePortfolio extends Widget
 {
     public function run()
     {
-        $query = Project::find();
-        $query->limit( 12 );
+        $limit = \Yii::$app->params[ 'homePortfolio.pagesize' ];
 
         return $this->render( 'home-portfolio', [
-            'portfolio' => $query->all(),
+            'portfolio' => Project::find()->limit( $limit )->all(),
         ] );
     }
 }

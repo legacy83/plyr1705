@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'socialFacebookLink' => '#',
-    'socialTwitterLink' => '#',
-    'socialDribbbleLink' => '#',
+    'homePortfolio.pagesize' => 12,
+    'socialLinks.facebook' => '#',
+    'socialLinks.twitter' => '#',
+    'socialLinks.dribbble' => '#',
 ];
