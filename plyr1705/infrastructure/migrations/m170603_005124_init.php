@@ -1,5 +1,7 @@
 <?php
 
+namespace plyr1705\infrastructure\migrations;
+
 use yii\db\Migration;
 
 /**

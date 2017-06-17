@@ -24,7 +24,10 @@ $config = [
     'controllerMap' => [
         'migrate' => [
             'class' => 'yii\console\controllers\MigrateController',
-            'migrationPath' => '@plyr1705/infrastructure/migrations',
+            'migrationPath' => null,
+            'migrationNamespaces' => [
+                'plyr1705\infrastructure\migrations',
+            ],
         ],
     ],
 ];
